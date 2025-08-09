@@ -1,12 +1,13 @@
 import data from "../../data.json";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import Details from "../components/Details";
 export default function Planets() {
   const { planetName } = useParams();
   const planet = data.find((planet) => planet.name === planetName);
   const [activeDescription, setActiveDescription] =
     useState<string>("overview");
-  const descriptionArray = ["overview", "sturcture", "surface"];
+  const descriptionArray = ["overview", "structure", "surface"];
   const clickHandle = (description: string) => {
     setActiveDescription(description);
   };
@@ -113,82 +114,10 @@ export default function Planets() {
         className="text-[#fff] px-[2.4rem] mt-[2.8rem]
       uppercase flex flex-col gap-[0.8rem]"
       >
-        <div
-          className="border solid border-[#fff]
-        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
-        flex items-center justify-between"
-          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
-        >
-          <span
-            className="text-[0.8rem] font-[700]
-          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
-          >
-            ROTATION TIME
-          </span>
-          <span
-            className="text-[2rem] font-[Antonio]
-          tracking-[-0.75px] font-[400]"
-          >
-            {planet?.rotation}
-          </span>
-        </div>
-        <div
-          className="border solid border-[#fff]
-        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
-        flex items-center justify-between"
-          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
-        >
-          <span
-            className="text-[0.8rem] font-[700]
-          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
-          >
-            REVOLUTION TIME
-          </span>
-          <span
-            className="text-[2rem] font-[Antonio]
-          tracking-[-0.75px] font-[400]"
-          >
-            {planet?.revolution}
-          </span>
-        </div>
-        <div
-          className="border solid border-[#fff]
-        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
-        flex items-center justify-between"
-          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
-        >
-          <span
-            className="text-[0.8rem] font-[700]
-          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
-          >
-            radius
-          </span>
-          <span
-            className="text-[2rem] font-[Antonio]
-          tracking-[-0.75px] font-[400]"
-          >
-            {planet?.radius}
-          </span>
-        </div>
-        <div
-          className="border solid border-[#fff]
-        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
-        flex items-center justify-between"
-          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
-        >
-          <span
-            className="text-[0.8rem] font-[700]
-          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
-          >
-            AVERAGE TEMP.
-          </span>
-          <span
-            className="text-[2rem] font-[Antonio]
-          tracking-[-0.75px] font-[400]"
-          >
-            {planet?.temperature}
-          </span>
-        </div>
+        <Details label="ROTATION TIME" value={planet?.rotation} />
+        <Details label="REVOLUTION TIME" value={planet?.revolution} />
+        <Details label="RADIUS" value={planet?.radius} />
+        <Details label="AVERAGE TEMP." value={planet?.temperature} />
       </div>
     </div>
   );
