@@ -1,22 +1,36 @@
 import data from "../../data.json";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 export default function Planets() {
   const { planetName } = useParams();
   const planet = data.find((planet) => planet.name === planetName);
+  const [activeDescription, setActiveDescription] =
+    useState<string>("overview");
+  const descriptionArray = ["overview", "sturcture", "surface"];
+  const clickHandle = (description: string) => {
+    setActiveDescription(description);
+  };
   return (
-    <div>
+    <div className="">
       <div>
         <div className="flex justify-between">
-          <div>
-            <span className="cursor-[pointer]">OVERVIEW</span>
-          </div>
-          <div>
-            <span className="cursor-[pointer]">STRUCTURE</span>
-          </div>
-          <div>
-            <span className="cursor-[pointer]">SURFACE</span>
-          </div>
+          {descriptionArray.map((description) => (
+            <div
+              key={description}
+              className="cursor-[pointer]"
+              onClick={() => clickHandle(description)}
+            >
+              <span>{description}</span>
+              {activeDescription === description && (
+                <div
+                  className="h-[0.4rem] w-full mt-[1.7rem]"
+                  style={{ backgroundColor: planet?.color }}
+                ></div>
+              )}
+            </div>
+          ))}
         </div>
+        <div className="w-full h-px opacity-[0.2] bg-[#fff] relative bottom-[0.1rem]"></div>
         <div>
           <img
             src={planet?.images.planet}
@@ -40,8 +54,24 @@ export default function Planets() {
         </div>
         <div>
           <h2>{planet?.name}</h2>
-          <p>{planet?.overview.content}</p>
-          <span>{planet?.overview.source}</span>
+          {activeDescription === "overview" && (
+            <>
+              <p>{planet?.overview.content}</p>
+              <span>{planet?.overview.source}</span>
+            </>
+          )}
+          {activeDescription === "structure" && (
+            <>
+              <p>{planet?.structure.content}</p>
+              <span>{planet?.structure.source}</span>
+            </>
+          )}
+          {activeDescription === "surface" && (
+            <>
+              <p>{planet?.geology.content}</p>
+              <span>{planet?.geology.source}</span>
+            </>
+          )}
         </div>
       </div>
       <div>

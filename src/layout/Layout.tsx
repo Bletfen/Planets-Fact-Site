@@ -29,7 +29,9 @@ export default function Layout() {
     bg-[url(./assets/background-stars.svg)]"
     >
       <Header />
-      <Outlet />
+      <main className="mt-[2rem]">
+        <Outlet />
+      </main>
     </div>
   );
 }
