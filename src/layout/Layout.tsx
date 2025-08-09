@@ -25,8 +25,8 @@ export default function Layout() {
   }, []);
   return (
     <div
-      className="bg-[#070724] h-screen 
-    bg-[url(./assets/background-stars.svg)]"
+      className="bg-[#070724] min-h-screen 
+    bg-[url(./assets/background-stars.svg)] bg-contain"
     >
       <Header />
       <main className="mt-[2rem]">

@@ -11,7 +11,7 @@ export default function Planets() {
     setActiveDescription(description);
   };
   return (
-    <div className="">
+    <div className="pb-[4.8rem]">
       <div className="flex flex-col">
         <div
           className="flex justify-between px-[2.4rem]
@@ -109,22 +109,85 @@ export default function Planets() {
           )}
         </div>
       </div>
-      <div>
-        <div>
-          <span>ROTATION TIME</span>
-          <span>{planet?.rotation}</span>
+      <div
+        className="text-[#fff] px-[2.4rem] mt-[2.8rem]
+      uppercase flex flex-col gap-[0.8rem]"
+      >
+        <div
+          className="border solid border-[#fff]
+        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
+        flex items-center justify-between"
+          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
+        >
+          <span
+            className="text-[0.8rem] font-[700]
+          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
+          >
+            ROTATION TIME
+          </span>
+          <span
+            className="text-[2rem] font-[Antonio]
+          tracking-[-0.75px] font-[400]"
+          >
+            {planet?.rotation}
+          </span>
         </div>
-        <div>
-          <span>REVOLUTION TIME</span>
-          <span>{planet?.revolution}</span>
+        <div
+          className="border solid border-[#fff]
+        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
+        flex items-center justify-between"
+          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
+        >
+          <span
+            className="text-[0.8rem] font-[700]
+          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
+          >
+            REVOLUTION TIME
+          </span>
+          <span
+            className="text-[2rem] font-[Antonio]
+          tracking-[-0.75px] font-[400]"
+          >
+            {planet?.revolution}
+          </span>
         </div>
-        <div>
-          <span>radius</span>
-          <span>{planet?.radius}</span>
+        <div
+          className="border solid border-[#fff]
+        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
+        flex items-center justify-between"
+          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
+        >
+          <span
+            className="text-[0.8rem] font-[700]
+          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
+          >
+            radius
+          </span>
+          <span
+            className="text-[2rem] font-[Antonio]
+          tracking-[-0.75px] font-[400]"
+          >
+            {planet?.radius}
+          </span>
         </div>
-        <div>
-          <span>AVERAGE TEMP.</span>
-          <span>{planet?.temperature}</span>
+        <div
+          className="border solid border-[#fff]
+        px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
+        flex items-center justify-between"
+          style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
+        >
+          <span
+            className="text-[0.8rem] font-[700]
+          leading-[1.6rem] tracking-[0.727px] opacity-[0.5]"
+          >
+            AVERAGE TEMP.
+          </span>
+          <span
+            className="text-[2rem] font-[Antonio]
+          tracking-[-0.75px] font-[400]"
+          >
+            {planet?.temperature}
+          </span>
         </div>
       </div>
     </div>
