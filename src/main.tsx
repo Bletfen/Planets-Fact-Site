@@ -4,12 +4,10 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Planets from "./pages/Planet";
-import { useState } from "react";
-const [isOpen, setIsOpen] = useState<boolean>(false);
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout isOpen={isOpen} setIsOpen={setIsOpen} />,
+    element: <Layout />,
     children: [
       {
         path: "/:planetName",

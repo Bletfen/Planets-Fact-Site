@@ -1,11 +1,7 @@
 import HamburgerMenu from "./HamburgerMenu";
-export default function Header({
-  isOpen,
-  setIsOpen,
-}: {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+import { useState } from "react";
+export default function Header() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <div>
       <div

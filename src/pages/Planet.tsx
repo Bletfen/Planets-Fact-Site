@@ -17,7 +17,27 @@ export default function Planets() {
             <span className="cursor-[pointer]">SURFACE</span>
           </div>
         </div>
-        <div>{/* <img src={planet?.images.planet} alt="planet-icon" /> */}</div>
+        <div>
+          <img
+            src={planet?.images.planet}
+            alt="planet-icon"
+            style={
+              {
+                "--mobile-width": planet?.images.sizes.mobile.width,
+                "--mobile-height": planet?.images.sizes.mobile.height,
+                "--tablet-width": planet?.images.sizes.tablet.width,
+                "--tablet-height": planet?.images.sizes.tablet.height,
+                "--desktop-width": planet?.images.sizes.desktop.width,
+                "--desktop-height": planet?.images.sizes.desktop.height,
+              } as React.CSSProperties
+            }
+            className="
+                w-[var(--mobile-width)] h-[var(--mobile-height)]
+                md:w-[var(--tablet-width)] md:h-[var(--tablet-height)]
+                xl:w-[var(--desktop-width)] xl:h-[var(--desktop-height)]
+              "
+          />
+        </div>
         <div>
           <h2>{planet?.name}</h2>
           <p>{planet?.overview.content}</p>

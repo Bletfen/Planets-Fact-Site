@@ -24,15 +24,15 @@
       "sizes": {
         "mobile": {
           "width": "11.1rem",
-          "heigth": "11.1rem"
+          "height": "11.1rem"
         },
         "tablet": {
           "width": "18.4rem",
-          "heigth": "18.4rem"
+          "height": "18.4rem"
         },
         "desktop": {
           "width": "29rem",
-          "heigth": "29rem"
+          "height": "29rem"
         }
       }
     }
@@ -62,15 +62,15 @@
       "sizes": {
         "mobile": {
           "width": "15.4rem",
-          "heigth": "15.4rem"
+          "height": "15.4rem"
         },
         "tablet": {
           "width": "25.3rem",
-          "heigth": "25.3rem"
+          "height": "25.3rem"
         },
         "desktop": {
           "width": "40rem",
-          "heigth": "40rem"
+          "height": "40rem"
         }
       }
     }
@@ -100,15 +100,15 @@
       "sizes": {
         "mobile": {
           "width": "17.3rem",
-          "heigth": "17.3rem"
+          "height": "17.3rem"
         },
         "tablet": {
           "width": "28.5rem",
-          "heigth": "28.5rem"
+          "height": "28.5rem"
         },
         "desktop": {
           "width": "45rem",
-          "heigth": "45rem"
+          "height": "45rem"
         }
       }
     }
@@ -138,15 +138,15 @@
       "sizes": {
         "mobile": {
           "width": "12.9rem",
-          "heigth": "12.9rem"
+          "height": "12.9rem"
         },
         "tablet": {
           "width": "21.3rem",
-          "heigth": "21.3rem"
+          "height": "21.3rem"
         },
         "desktop": {
           "width": "33.6rem",
-          "heigth": "33.6rem"
+          "height": "33.6rem"
         }
       }
     }
@@ -176,15 +176,15 @@
       "sizes": {
         "mobile": {
           "width": "22.4rem",
-          "heigth": "22.4rem"
+          "height": "22.4rem"
         },
         "tablet": {
           "width": "36.9rem",
-          "heigth": "36.9rem"
+          "height": "36.9rem"
         },
         "desktop": {
           "width": "58.2rem",
-          "heigth": "58.2rem"
+          "height": "58.2rem"
         }
       }
     }
@@ -214,15 +214,15 @@
       "sizes": {
         "mobile": {
           "width": "25.6rem",
-          "heigth": "25.6rem"
+          "height": "25.6rem"
         },
         "tablet": {
           "width": "42.2rem",
-          "heigth": "42.2rem"
+          "height": "42.2rem"
         },
         "desktop": {
           "width": "66.6rem",
-          "heigth": "66.6rem"
+          "height": "66.6rem"
         }
       }
     }
@@ -252,15 +252,15 @@
       "sizes": {
         "mobile": {
           "width": "17.6rem",
-          "heigth": "17.6rem"
+          "height": "17.6rem"
         },
         "tablet": {
           "width": "29rem",
-          "heigth": "29rem"
+          "height": "29rem"
         },
         "desktop": {
           "width": "45.8rem",
-          "heigth": "45.8rem"
+          "height": "45.8rem"
         }
       }
     }
@@ -290,15 +290,15 @@
       "sizes": {
         "mobile": {
           "width": "17.3rem",
-          "heigth": "17.3rem"
+          "height": "17.3rem"
         },
         "tablet": {
           "width": "28.5rem",
-          "heigth": "28.5rem"
+          "height": "28.5rem"
         },
         "desktop": {
           "width": "45rem",
-          "heigth": "45rem"
+          "height": "45rem"
         }
       }
     }
