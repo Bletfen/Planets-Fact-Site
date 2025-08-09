@@ -17,7 +17,7 @@ export default function Planets() {
         <div
           className="flex justify-between px-[2.4rem]
         text-[#fff] text-[0.9rem] font-[700] uppercase
-        tracking-[1.929px]"
+        tracking-[1.929px] md:hidden"
         >
           {descriptionArray.map((description) => (
             <div

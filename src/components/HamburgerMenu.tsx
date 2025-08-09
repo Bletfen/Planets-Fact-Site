@@ -5,7 +5,7 @@ export default function HamburgerMenu({ isOpen }: { isOpen: boolean }) {
   return (
     <ul
       className="absolute bg-[#070724]
-    w-full z-[1]"
+    w-full z-[1] md:hidden"
     >
       {data.map((element) => (
         <li key={element.name} className="flex flex-col gap-[2rem]">
