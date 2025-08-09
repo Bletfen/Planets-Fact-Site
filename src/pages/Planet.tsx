@@ -17,9 +17,7 @@ export default function Planets() {
             <span className="cursor-[pointer]">SURFACE</span>
           </div>
         </div>
-        <div>
-          <img src={planet?.images.planet} alt="" />
-        </div>
+        <div>{/* <img src={planet?.images.planet} alt="planet-icon" /> */}</div>
         <div>
           <h2>{planet?.name}</h2>
           <p>{planet?.overview.content}</p>

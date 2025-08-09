@@ -12,7 +12,13 @@ const navigationLinks: string[] = [
   "/Uranus",
   "/Neptune",
 ];
-export default function Layout() {
+export default function Layout({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const location = useLocation();
   const pathName = location.pathname;
   const navigate = useNavigate();
@@ -28,7 +34,7 @@ export default function Layout() {
       className="bg-[#070724] h-screen 
     bg-[url(./assets/background-stars.svg)]"
     >
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <Outlet />
     </div>
   );
