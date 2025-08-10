@@ -6,9 +6,13 @@ export default function DescriptionText({
   source: string | undefined;
 }) {
   return (
-    <div className="flex flex-col w-[33.9rem]">
+    <div className="flex flex-col w-[39.9rem]">
       <p className="text-[1.1rem] leading-[2.2rem] mb-[3.2rem]">{content}</p>
-      <p className="text-[1.2rem] opacity-[0.5] flex self-center items-center gap-[0.4rem]">
+      <p
+        className="text-[1.2rem] opacity-[0.5] flex 
+        self-center items-center gap-[0.4rem]
+        md:self-start"
+      >
         Source :
         <a
           href={source}

@@ -7,7 +7,9 @@ export default function Details({ label, value }: DetailProps) {
     <div
       className="border solid border-[#fff]
         px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
-        flex items-center justify-between"
+        flex items-center justify-between
+        md:flex-col md:items-start md:gap-[0.6rem]
+        md:pl-[1.5rem] md:pt-[1.6rem] md:pb-[1.9rem]"
       style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
     >
       <span

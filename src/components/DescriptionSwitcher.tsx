@@ -1,20 +1,18 @@
-import data from "../../data.json";
-import { useParams } from "react-router-dom";
 export default function DescriptionSwitcher({
   activeDescription,
   setActiveDescription,
+  planetColor,
 }: {
   activeDescription: string;
   setActiveDescription: React.Dispatch<React.SetStateAction<string>>;
+  planetColor: string | undefined;
 }) {
   const descriptionArray = ["overview", "structure", "surface"];
   const clickHandle = (description: string) => {
     setActiveDescription(description);
   };
-  const { planetName } = useParams();
-  const planet = data.find((planet) => planet.name === planetName);
   return (
-    <div>
+    <div className="flex justify-between w-full">
       {descriptionArray.map((description) => (
         <div
           key={description}
@@ -25,7 +23,7 @@ export default function DescriptionSwitcher({
           {activeDescription === description && (
             <div
               className="h-[0.4rem] w-full mt-[1.7rem]"
-              style={{ backgroundColor: planet?.color }}
+              style={{ backgroundColor: planetColor }}
             ></div>
           )}
         </div>

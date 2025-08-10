@@ -16,14 +16,18 @@ export default function Planets() {
         <div
           className="flex justify-between px-[2.4rem]
         text-[#fff] text-[0.9rem] font-[700] uppercase
-        tracking-[1.929px] md:hidden"
+        tracking-[1.929px] md:hidden mt-[2rem]"
         >
           <DescriptionSwitcher
             activeDescription={activeDescription}
             setActiveDescription={setActiveDescription}
+            planetColor={planet?.color}
           />
         </div>
-        <div className="w-full h-px opacity-[0.2] bg-[#fff] relative bottom-[0.1rem]"></div>
+        <div
+          className="w-full h-px opacity-[0.2] 
+        bg-[#fff] relative bottom-[0.1rem] md:hidden"
+        ></div>
         <div className="mt-[9.5rem] mb-[9.8rem] self-center">
           <img
             src={planet?.images.planet}
@@ -47,35 +51,44 @@ export default function Planets() {
         </div>
         <div
           className="flex flex-col text-center text-[#fff]
-        font-[400] px-[2.4rem]"
+        font-[400] px-[2.4rem] text-start
+        "
         >
-          <h2
-            className="text-[4rem] font-[Antonio] uppercase
-          mb-[1.6rem]"
-          >
-            {planet?.name}
-          </h2>
-          <div className="flex justify-between">
-            {activeDescription === "overview" && (
-              <DescriptionText
-                content={planet?.overview.content}
-                source={planet?.overview.source}
-              />
-            )}
-            {activeDescription === "structure" && (
-              <DescriptionText
-                content={planet?.structure.content}
-                source={planet?.structure.source}
-              />
-            )}
-            {activeDescription === "surface" && (
-              <DescriptionText
-                content={planet?.geology.content}
-                source={planet?.geology.source}
-              />
-            )}
-            <div>
+          <div className="flex justify-between items-center gap-[6.9rem]">
+            <div
+              className="flex flex-col text-center mx-auto
+            md:m-[unset] md:text-start"
+            >
+              <h2
+                className="text-[4rem] font-[Antonio] uppercase
+              mb-[1.6rem] w-full"
+              >
+                {planet?.name}
+              </h2>
+              {activeDescription === "overview" && (
+                <DescriptionText
+                  content={planet?.overview.content}
+                  source={planet?.overview.source}
+                />
+              )}
+              {(activeDescription === "structure" ||
+                activeDescription === "Internal Structure") && (
+                <DescriptionText
+                  content={planet?.structure.content}
+                  source={planet?.structure.source}
+                />
+              )}
+              {(activeDescription === "surface" ||
+                activeDescription === "Surface Geology") && (
+                <DescriptionText
+                  content={planet?.geology.content}
+                  source={planet?.geology.source}
+                />
+              )}
+            </div>
+            <div className="hidden md:flex flex-col w-full max-w-[35rem]">
               <DescriptioTD
+                color={planet?.color}
                 activeDescription={activeDescription}
                 setActiveDescription={setActiveDescription}
               />
@@ -85,7 +98,8 @@ export default function Planets() {
       </div>
       <div
         className="text-[#fff] px-[2.4rem] mt-[2.8rem]
-      uppercase flex flex-col gap-[0.8rem]"
+      uppercase grid gap-[0.8rem]
+      md:grid-cols-4 md:gap-[1.1rem]"
       >
         <Details label="ROTATION TIME" value={planet?.rotation} />
         <Details label="REVOLUTION TIME" value={planet?.revolution} />

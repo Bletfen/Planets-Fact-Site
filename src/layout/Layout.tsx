@@ -29,7 +29,7 @@ export default function Layout() {
     bg-[url(./assets/background-stars.svg)] bg-contain"
     >
       <Header />
-      <main className="mt-[2rem] md:mt-[2.7rem]">
+      <main className=" max-w-[144rem] w-full mx-auto flex flex-col">
         <Outlet />
       </main>
     </div>

@@ -32,9 +32,12 @@ export default function Header() {
           </g>
         </svg>
       </div>
-      <div className="w-full h-px opacity-[0.2] bg-[#fff] md:hidden"></div>
-      <HamburgerMenu isOpen={isOpen} />
       <OrdinaryMenu />
+      <div
+        className="w-full h-px opacity-[0.2] bg-[#fff]
+      md:mt-[2.7rem]"
+      ></div>
+      <HamburgerMenu isOpen={isOpen} />
     </div>
   );
 }
