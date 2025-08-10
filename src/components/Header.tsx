@@ -44,7 +44,7 @@ export default function Header() {
         className="w-full h-px opacity-[0.2] bg-[#fff]
         md:mt-[2.7rem] xl:m-[unset]"
       ></div>
-      <HamburgerMenu isOpen={isOpen} />
+      <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function Planets() {
   ) {
     imgSrc = planet?.images.internal;
   } else if (
-    activeDescription === "geology" ||
+    activeDescription === "surface" ||
     activeDescription === "Surface Geology"
   ) {
     imgSrc = planet?.images.planet;
@@ -45,9 +45,8 @@ export default function Planets() {
           />
         </div>
         <div
-          className="w-full h-px opacity-[0.2] mt-[2rem]
-          bg-[#fff] relative bottom-[0.1rem] md:hidden
-          xl"
+          className="w-full h-px opacity-[0.2]
+          bg-[#fff] relative bottom-[0.1rem] md:hidden"
         ></div>
         <div
           className="self-center xl:pl-[var(--desktop-padding)] relative"
@@ -80,7 +79,7 @@ export default function Planets() {
                 xl:my-[unset]
               "
           />
-          {activeDescription === "geology" ||
+          {activeDescription === "surface" ||
           activeDescription === "Surface Geology" ? (
             <img
               src={planet?.images.geology}

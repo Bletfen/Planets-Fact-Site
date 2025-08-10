@@ -1,26 +1,39 @@
 import { Link } from "react-router-dom";
 import data from "../../data.json";
-export default function HamburgerMenu({ isOpen }: { isOpen: boolean }) {
+export default function HamburgerMenu({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   if (!isOpen) return null;
   return (
     <ul
       className="absolute bg-[#070724]
-    w-full z-[1] md:hidden"
+      w-full z-[1] md:hidden"
     >
       {data.map((element) => (
         <li key={element.name} className="flex flex-col gap-[2rem]">
           <Link
             to={element.name}
             className="flex items-center
-          justify-between mt-[2rem] px-[2.4rem]
-          text-[#fff]"
+            justify-between mt-[2rem] px-[2.4rem]
+            text-[#fff]"
+            onClick={() => setIsOpen(!isOpen)}
           >
             <div className="flex gap-[2.5rem] items-center">
               <div
                 className="w-[2rem] h-[2rem] rounded-full"
                 style={{ backgroundColor: element.color }}
               ></div>
-              {element.name}
+              <span
+                className="font-league font-[700]
+                leading-[2.5rem] text-[1.5rem]
+                tracking-[1.364px] uppercase"
+              >
+                {element.name}
+              </span>
             </div>
             <svg
               width="6"
