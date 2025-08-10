@@ -1,10 +1,9 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
-
 html {
   font-size: 62.5%;
 }
 
-body {
-  font-family: "League Spartan", sans-serif;
+@theme {
+  --font-league: "League Spartan", sans-serif;
 }

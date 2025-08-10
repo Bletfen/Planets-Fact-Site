@@ -25,13 +25,14 @@ export default function DescriptionTD({
     setActiveDescription(description);
   };
   return (
-    <div className="flex flex-col gap-[1.6rem]">
+    <>
       {arrayOfDescription.map((description) => (
         <div
           className="pl-[2rem] py-[0.8rem] border solid border-[#fff]
-      flex gap-[1.7rem]
-      text-[0.9rem] font-[700] leading-[2.5] tracking-[1.929px] uppercase
-      cursor-[pointer]"
+          flex gap-[1.7rem]
+          text-[0.9rem] font-[700] leading-[2.5] tracking-[1.929px] uppercase
+          cursor-[pointer] xl:pl-[2.8rem] xl:py-[1.2rem]
+          xl:text-[1.2rem] xl:tracking-[2.575px] font-league"
           onClick={() => clickHandler(description.label)}
           style={{
             borderColor: "rgba(255, 255, 255, 0.2)",
@@ -44,6 +45,6 @@ export default function DescriptionTD({
           <span>{description.label}</span>
         </div>
       ))}
-    </div>
+    </>
   );
 }

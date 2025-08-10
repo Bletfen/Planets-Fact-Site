@@ -6,18 +6,24 @@ export default function DescriptionText({
   source: string | undefined;
 }) {
   return (
-    <div className="flex flex-col w-[39.9rem] xl:w-[35rem]">
-      <p className="text-[1.1rem] leading-[2.2rem] mb-[3.2rem]">{content}</p>
+    <div className="flex flex-col max-w-[39.9rem] xl:w-[35rem]">
+      <p
+        className="text-[1.1rem] leading-[2.2rem] mb-[3.2rem]
+        xl:text-[1.4rem] font-league xl:mb-[2.4rem]"
+      >
+        {content}
+      </p>
       <p
         className="text-[1.2rem] opacity-[0.5] flex 
         self-center items-center gap-[0.4rem]
-        md:self-start"
+        md:self-start xl:text-[1.4rem]"
       >
         Source :
         <a
           href={source}
           className="font-[700] underline flex 
-          items-center gap-[0.4rem]"
+          items-center gap-[0.4rem]
+          xl:gap-[0.8rem]"
         >
           Wikipedia
           <svg
