@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/Layout";
-import Planets from "./pages/Planet";
+import Planet from "./pages/Planet";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/:planetName",
-        element: <Planets />,
+        element: <Planet />,
       },
     ],
   },

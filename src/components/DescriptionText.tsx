@@ -9,7 +9,7 @@ export default function DescriptionText({
     <div className="flex flex-col max-w-[39.9rem] xl:w-[35rem]">
       <p
         className="text-[1.1rem] leading-[2.2rem] mb-[3.2rem]
-        xl:text-[1.4rem] font-league xl:mb-[2.4rem]"
+        xl:text-[1.4rem] font-league xl:mb-[2.4rem] min-h-[17.5rem]"
       >
         {content}
       </p>

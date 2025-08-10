@@ -6,10 +6,10 @@ import DescriptionSwitcher from "../components/DescriptionSwitcher";
 import DescriptioTD from "../components/DescriptionTD";
 import DescriptionText from "../components/DescriptionText";
 export default function Planets() {
-  const { planetName } = useParams();
-  const planet = data.find((planet) => planet.name === planetName);
   const [activeDescription, setActiveDescription] =
     useState<string>("overview");
+  const { planetName } = useParams();
+  const planet = data.find((planet) => planet.name === planetName);
   let imgSrc: string | undefined = "";
   if (activeDescription === "overview") {
     imgSrc = planet?.images.planet;
