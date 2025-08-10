@@ -6,7 +6,8 @@ export default function OrdinaryMenu() {
       <ul
         className="hidden md:flex gap-[3.3rem] justify-center text-[#fff]
       px-[5.1rem] text-[1.1rem] font-[700] leading-[2.5rem]
-      tracking-[0.1rem] uppercase mt-[3.9rem]"
+      tracking-[0.1rem] uppercase mt-[3.9rem]
+      xl:p-[unset] xl:m-[unset]"
       >
         {data.map((element) => (
           <li key={element.name}>

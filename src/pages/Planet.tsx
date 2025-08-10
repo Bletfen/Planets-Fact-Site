@@ -11,7 +11,7 @@ export default function Planets() {
   const [activeDescription, setActiveDescription] =
     useState<string>("overview");
   return (
-    <div className="pb-[4.8rem]">
+    <div className="pb-[4.8rem] md:pb-[3.6rem]">
       <div className="flex flex-col">
         <div
           className="flex justify-between px-[2.4rem]
@@ -69,8 +69,8 @@ export default function Planets() {
             md:m-[unset] md:text-start"
             >
               <h2
-                className="text-[4rem] font-[Antonio] uppercase
-              mb-[1.6rem] w-full"
+                className="text-[4rem] font-[Antonio] uppercase font-[400]
+              mb-[1.6rem] w-full md:mb-[2.4rem] md:text-[4.8rem]"
               >
                 {planet?.name}
               </h2>
@@ -108,7 +108,7 @@ export default function Planets() {
       <div
         className="text-[#fff] px-[2.4rem] mt-[2.8rem]
       uppercase grid gap-[0.8rem]
-      md:grid-cols-4 md:gap-[1.1rem]"
+      md:grid-cols-4 md:gap-[1.1rem] md:mt-[2.7rem]"
       >
         <Details label="ROTATION TIME" value={planet?.rotation} />
         <Details label="REVOLUTION TIME" value={planet?.revolution} />

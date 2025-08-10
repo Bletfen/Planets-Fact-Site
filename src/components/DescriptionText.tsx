@@ -16,7 +16,8 @@ export default function DescriptionText({
         Source :
         <a
           href={source}
-          className="font-[700] underline flex items-center gap-[0.4rem]"
+          className="font-[700] underline flex 
+          items-center gap-[0.4rem]"
         >
           Wikipedia
           <svg

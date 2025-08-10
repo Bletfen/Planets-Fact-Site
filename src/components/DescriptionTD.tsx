@@ -40,7 +40,7 @@ export default function DescriptionTD({
             }),
           }}
         >
-          <span>{description.value}</span>
+          <span className="opacity-[0.5]">{description.value}</span>
           <span>{description.label}</span>
         </div>
       ))}

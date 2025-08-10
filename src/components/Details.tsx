@@ -9,7 +9,8 @@ export default function Details({ label, value }: DetailProps) {
         px-[2.4rem] pt-[0.9rem] pb-[1.3rem]
         flex items-center justify-between
         md:flex-col md:items-start md:gap-[0.6rem]
-        md:pl-[1.5rem] md:pt-[1.6rem] md:pb-[1.9rem]"
+        md:pl-[1.5rem] md:pt-[1.6rem] md:pb-[1.9rem]
+        "
       style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
     >
       <span
@@ -20,7 +21,8 @@ export default function Details({ label, value }: DetailProps) {
       </span>
       <span
         className="text-[2rem] font-[Antonio]
-          tracking-[-0.75px] font-[400]"
+          tracking-[-0.75px] font-[400]
+          md:text-[2.4rem] md:tracking-[-0.9px]"
       >
         {value}
       </span>
