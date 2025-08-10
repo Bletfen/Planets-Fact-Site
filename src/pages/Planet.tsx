@@ -10,6 +10,20 @@ export default function Planets() {
   const planet = data.find((planet) => planet.name === planetName);
   const [activeDescription, setActiveDescription] =
     useState<string>("overview");
+  let imgSrc: string | undefined = "";
+  if (activeDescription === "overview") {
+    imgSrc = planet?.images.planet;
+  } else if (
+    activeDescription === "structure" ||
+    activeDescription === "Internal Structure"
+  ) {
+    imgSrc = planet?.images.internal;
+  } else if (
+    activeDescription === "geology" ||
+    activeDescription === "Surface Geology"
+  ) {
+    imgSrc = planet?.images.planet;
+  }
   return (
     <div
       className="pb-[4.8rem] md:pb-[3.6rem] xl:pb-[5.6rem]
@@ -31,12 +45,12 @@ export default function Planets() {
           />
         </div>
         <div
-          className="w-full h-px opacity-[0.2] 
-        bg-[#fff] relative bottom-[0.1rem] md:hidden
-        xl"
+          className="w-full h-px opacity-[0.2] mt-[2rem]
+          bg-[#fff] relative bottom-[0.1rem] md:hidden
+          xl"
         ></div>
         <div
-          className="self-center xl:pl-[var(--desktop-padding)]"
+          className="self-center xl:pl-[var(--desktop-padding)] relative"
           style={
             {
               "--desktop-padding": planet?.padding,
@@ -46,7 +60,7 @@ export default function Planets() {
           }
         >
           <img
-            src={planet?.images.planet}
+            src={imgSrc}
             alt="planet-icon"
             style={
               {
@@ -66,6 +80,18 @@ export default function Planets() {
                 xl:my-[unset]
               "
           />
+          {activeDescription === "geology" ||
+          activeDescription === "Surface Geology" ? (
+            <img
+              src={planet?.images.geology}
+              alt="geology img"
+              className="absolute w-[50%] top-90 left-1/2 
+              translate-x-[-50%] translate-y-[-50%]
+              md:top-145 xl:w-[15rem] xl:left-192"
+            />
+          ) : (
+            ""
+          )}
         </div>
         <div
           className="flex justify-between 
