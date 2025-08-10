@@ -28,7 +28,15 @@ export default function Planets() {
           className="w-full h-px opacity-[0.2] 
         bg-[#fff] relative bottom-[0.1rem] md:hidden"
         ></div>
-        <div className="mt-[9.5rem] mb-[9.8rem] self-center">
+        <div
+          className="self-center"
+          style={
+            {
+              "--mobile-mt": planet?.margin?.mobile,
+              "--tablet-mt": planet?.margin?.tablet,
+            } as React.CSSProperties
+          }
+        >
           <img
             src={planet?.images.planet}
             alt="planet-icon"
@@ -46,6 +54,7 @@ export default function Planets() {
                 w-[var(--mobile-width)] h-[var(--mobile-height)]
                 md:w-[var(--tablet-width)] md:h-[var(--tablet-height)]
                 xl:w-[var(--desktop-width)] xl:h-[var(--desktop-height)]
+                my-[var(--mobile-mt)] md:my-[var(--tablet-mt)]
               "
           />
         </div>
