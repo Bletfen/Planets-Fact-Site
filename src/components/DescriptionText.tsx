@@ -6,7 +6,7 @@ export default function DescriptionText({
   source: string | undefined;
 }) {
   return (
-    <div className="flex flex-col w-[39.9rem]">
+    <div className="flex flex-col w-[39.9rem] xl:w-[35rem]">
       <p className="text-[1.1rem] leading-[2.2rem] mb-[3.2rem]">{content}</p>
       <p
         className="text-[1.2rem] opacity-[0.5] flex 

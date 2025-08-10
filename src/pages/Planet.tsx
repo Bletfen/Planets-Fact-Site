@@ -11,8 +11,14 @@ export default function Planets() {
   const [activeDescription, setActiveDescription] =
     useState<string>("overview");
   return (
-    <div className="pb-[4.8rem] md:pb-[3.6rem]">
-      <div className="flex flex-col">
+    <div
+      className="pb-[4.8rem] md:pb-[3.6rem] xl:pb-[5.6rem]
+      xl:pr-[16.5rem]"
+    >
+      <div
+        className="flex flex-col xl:flex-row xl:justify-between
+      xl:items-center"
+      >
         <div
           className="flex justify-between px-[2.4rem]
         text-[#fff] text-[0.9rem] font-[700] uppercase
@@ -26,12 +32,14 @@ export default function Planets() {
         </div>
         <div
           className="w-full h-px opacity-[0.2] 
-        bg-[#fff] relative bottom-[0.1rem] md:hidden"
+        bg-[#fff] relative bottom-[0.1rem] md:hidden
+        xl"
         ></div>
         <div
-          className="self-center"
+          className="self-center xl:pl-[var(--desktop-padding)]"
           style={
             {
+              "--desktop-padding": planet?.padding,
               "--mobile-mt": planet?.margin?.mobile,
               "--tablet-mt": planet?.margin?.tablet,
             } as React.CSSProperties
@@ -60,17 +68,23 @@ export default function Planets() {
         </div>
         <div
           className="flex flex-col text-center text-[#fff]
-        font-[400] px-[2.4rem] text-start
-        "
+          font-[400] px-[2.4rem] text-start
+          xl:px-[unset]
+          "
         >
-          <div className="flex justify-between items-center gap-[6.9rem]">
+          <div
+            className="flex justify-between 
+            items-center gap-[6.9rem]
+            xl:flex-col xl:items-start"
+          >
             <div
               className="flex flex-col text-center mx-auto
-            md:m-[unset] md:text-start"
+              md:m-[unset] md:text-start"
             >
               <h2
-                className="text-[4rem] font-[Antonio] uppercase font-[400]
-              mb-[1.6rem] w-full md:mb-[2.4rem] md:text-[4.8rem]"
+                className="text-[4rem] font-[Antonio] 
+                uppercase font-[400]
+                mb-[1.6rem] w-full md:mb-[2.4rem] md:text-[4.8rem]"
               >
                 {planet?.name}
               </h2>
@@ -106,9 +120,10 @@ export default function Planets() {
         </div>
       </div>
       <div
-        className="text-[#fff] px-[2.4rem] mt-[2.8rem]
+        className="text-[#fff] mt-[2.8rem]
       uppercase grid gap-[0.8rem]
-      md:grid-cols-4 md:gap-[1.1rem] md:mt-[2.7rem]"
+      md:grid-cols-4 md:gap-[1.1rem] md:mt-[2.7rem]
+      xl:pl-[16.5rem]"
       >
         <Details label="ROTATION TIME" value={planet?.rotation} />
         <Details label="REVOLUTION TIME" value={planet?.revolution} />
