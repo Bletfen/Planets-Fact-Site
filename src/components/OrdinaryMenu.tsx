@@ -24,7 +24,7 @@ export default function OrdinaryMenu() {
               <div
                 className="hidden xl:flex h-[0.4rem] w-full mt-[1.7rem]
                 absolute bottom-18 left-0 opacity-0 group-hover:opacity-100
-                transition-opacity"
+                transition-opacity transition ease duration-300"
                 style={{ backgroundColor: element.color }}
               ></div>
               <span>{element.name}</span>

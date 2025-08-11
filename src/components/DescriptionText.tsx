@@ -21,6 +21,8 @@ export default function DescriptionText({
         Source :
         <a
           href={source}
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-[700] underline flex 
           items-center gap-[0.4rem]
           xl:gap-[0.8rem]"
