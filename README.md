@@ -2,7 +2,7 @@
 
 A responsive and interactive website that provides fascinating facts about planets in our solar system. Built with React, React Router, and Tailwind CSS, the site is optimized for mobile-first design with smooth navigation and clean UI.
 
-🔗 Live Demo: [Planets Fact Site](https://planets-fact-site-sage-theta.vercel.app/Earth)
+🔗 Live Demo: [Planets Fact Site](https://planets-fact-site-aa1e.vercel.app/Earth)
 
 📌 Features
 
