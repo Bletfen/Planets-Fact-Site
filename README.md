@@ -1,70 +1,71 @@
 🌍 Planets Fact Site
 
-A responsive multi-page site that displays facts about each planet in our solar system. Built with React, TypeScript, and React Router, following a mobile-first approach. Data is loaded from a local JSON file.
-🚀 Live Site
+A responsive and interactive website that provides fascinating facts about planets in our solar system. Built with React, React Router, and Tailwind CSS, the site is optimized for mobile-first design with smooth navigation and clean UI.
 
-🔗 https://planets-fact-site-sage-theta.vercel.app/Earth
+🔗 Live Demo: [Planets Fact Site](https://planets-fact-site-sage-theta.vercel.app/Earth)
 
-📁 Project Structure
+📌 Features
+
+    Multi-page navigation with React Router
+
+    Dynamic planet pages loaded from JSON data
+
+    Mobile-first responsive design
+
+    Hamburger menu on mobile, horizontal navigation on desktop
+
+    Smooth hover and active states for improved UX
+
+    SVG images for sharp and scalable graphics
+
+🛠️ Tech Stack
+
+    React – UI rendering and component structure
+
+    React Router – Navigation between planet pages
+
+    Tailwind CSS – Styling and responsive design
+
+    Vite – Fast development environment
+
+    JSON Data – Storing planet facts and images
+
+📂 Project Structure
 
 Planets-Fact-Site/
-├── public/
-│ ├── planets/ # Planet images and assets
-│ └── index.html # Base HTML
+├── public/ # Static files
 ├── src/
-│ ├── components/ # UI components (Navbar, Planet details, etc.)
-│ ├── pages/ # Route pages
-│ ├── data.json # Planet data
-│ ├── App.tsx # Main app file
-│ ├── main.tsx # Entry point
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Page layout components
+│ ├── data/ # planets.json
+│ ├── assets/ # Images & SVGs
+│ ├── App.jsx # Main App
 │ └── index.css # Global styles
-├── package.json
-└── README.md
+└── package.json
 
-🛠️ Features
-
-    Mobile-first responsive design with a hamburger menu on small screens and a horizontal menu on desktop.
-
-    Dynamic routing with React Router — click a planet name to see its facts.
-
-    Data-driven rendering from data.json.
-
-    SVG planet images for crisp scaling.
-
-    Hover and active states for navigation items.
-
-    TypeScript for type safety and maintainable code.
-
-💻 Technologies Used
-
-    React (Vite)
-
-    TypeScript
-
-    React Router
-
-    Tailwind CSS for styling
-
-    ESLint & Prettier for code formatting and linting
-
-📦 Installation & Usage
-
-    Clone the repository:
+🚀 Getting Started
+1️⃣ Clone the repository
 
 git clone https://github.com/Bletfen/Planets-Fact-Site.git
-
-Navigate into the project folder:
-
 cd Planets-Fact-Site
 
-Install dependencies:
+2️⃣ Install dependencies
 
 npm install
 
-Start the development server:
+3️⃣ Run the development server
 
-    npm run dev
+npm run dev
 
+4️⃣ Build for production
+
+npm run build
+
+📸 Screenshots
+
+Desktop View
+
+Mobile View
 📜 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
