@@ -61,11 +61,6 @@ npm run dev
 
 npm run build
 
-📸 Screenshots
-
-Desktop View
-
-Mobile View
 📜 License
 
 This project is licensed under the MIT License.
