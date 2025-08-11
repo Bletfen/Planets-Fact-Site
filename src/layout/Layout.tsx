@@ -26,7 +26,7 @@ export default function Layout() {
   return (
     <div
       className="bg-[#070724] min-h-screen 
-    bg-[url(./assets/background-stars.svg)] bg-contain"
+      bg-[url(/assets/background-stars.svg)] bg-contain"
     >
       <Header />
       <main className=" max-w-[144rem] w-full mx-auto flex flex-col">
