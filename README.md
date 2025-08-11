@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+Planets Fact Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and interactive educational website built with React, TypeScript, Vite, React Router, and Tailwind CSS. It showcases detailed facts about the planets in our Solar System, including overview, internal structure, and surface geology.
+Features
 
-Currently, two official plugins are available:
+    Responsive Layout: Adaptable design for mobile, tablet, and desktop views.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Data-Driven: Loads planet data from a data.json file.
 
-## Expanding the ESLint configuration
+    Client-Side Routing: Navigate between planets using React Router.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    Dynamic Content: Toggle between Overview, Structure, and Surface modes with state management.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    Reusable Components: Modular design for planet details and description switches.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Tech Stack
+Technology Purpose
+React + TS Frontend framework & typing
+Vite Fast development build tool
+React Router Routing between planet pages
+Tailwind CSS Utility-first styling
+data.json Holds planet information
+Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    Clone the repo:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+git clone https://github.com/Bletfen/Planets-Fact-Site.git
+cd Planets-Fact-Site
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Install dependencies:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install
+
+Run the app:
+
+    npm run dev
+
+    Open http://localhost:3000 in your browser.
+
+Folder Structure
+
+public/ # Static assets (e.g., index.html, images)
+src/
+├─ components/ # Reusable UI components
+├─ pages/
+│ └─ Planet.tsx # Planet detail page
+├─ layout/ # App layout & routing
+├─ data.json # Planetary data
+└─ index.css # Global and Tailwind CSS
+
+Development Insights
+
+    State Lifting: activeDescription moves between Layout and Planet page via React Router’s Outlet context.
+
+    CSS Variables + Tailwind: Responsive width, height, and margin styles are managed using inline CSS custom properties.
+
+    Stable Background: The stars background covers the full viewport, while content is centered within a max-w-[144rem] container.
+
+    UX Optimizations: Invisible description blocks ensure consistent layout and prevent jumpiness when toggling content.
+
+Future Improvements
+
+    Smooth transitions between tabs (e.g., content height or image fade).
+
+    Add accessibility enhancements (keyboard navigation, label focus states).
+
+    Explore using React Context or state management libraries for cleaner prop passing.
+
+    Implement animations using Framer Motion or CSS transitions.
+
+Thanks for checking out the project! Let me know if you'd like help optimizing layout transitions or responsive behavior.
